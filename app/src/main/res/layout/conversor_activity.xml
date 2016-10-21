@@ -1,0 +1,60 @@
+<layout  xmlns:android="http://schemas.android.com/apk/res/android" >
+    <data>
+        <variable name="vm" type="uqbar.conversor_android_studio.viewmodel.ConversorActivityViewModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/conversor_millas_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                android:text="@string/millas" />
+
+            <EditText
+                android:id="@+id/conversor_millas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:hint="@string/millas"
+                android:inputType="number"
+                android:text="@={vm.millas}"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/paddingDeLaAplicacion" >
+
+            <TextView
+                android:id="@+id/conversor_kilometros_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                android:text="@string/kilometros" />
+
+            <TextView
+                android:id="@+id/conversor_kilometros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/kilometros"
+                android:text="@={vm.kilometros}"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
